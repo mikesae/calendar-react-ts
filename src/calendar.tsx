@@ -12,12 +12,9 @@ interface IState {
 class Calendar extends React.Component<any, IState> {
     public state: IState = {
         events: [
-            {
-                allDay: true,
-                end: new Date(),
-                start: new Date(),
-                title: 'Pizza',
-            }
+            {title: 'Pasta Faggioli', start: '2018-04-18', end: '2018-04-18'},
+            {title: 'Burgers', start: '2018-04-19', end: '2018-04-19'},
+            {title: 'Pizza', start: '2018-04-20', end: '2018-04-20'}
         ]
     };
 
@@ -26,7 +23,6 @@ class Calendar extends React.Component<any, IState> {
             events
         } = this.state;
         return (
-
             <BigCalendar
                 defaultDate={new Date()}
                 defaultView="month"
